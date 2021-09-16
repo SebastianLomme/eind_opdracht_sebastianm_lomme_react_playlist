@@ -1,33 +1,32 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { AddSong } from "../actions"
-import getImage from "./fetch"
+import { useDispatch } from "react-redux";
+import { AddSong } from "../actions";
+import getImage from "./fetch";
+
 
 function Form() {
     const dispatch = useDispatch()
-    const songs = useSelector(state => state.AddSong)
     const [input, setInput] = useState({})
-    const image = getImage(input.artiest)
-    console.log("input 1", input.title)
     const handleInput = (e) => {
         const { name, value } = e.target
         setInput({
             ...input,
             [name]: value,
-            id: songs.length + 1,
         }
         )
     }
+    const handleSubmit = async (e) => {
+            e.preventDefault()
+            setInput({
+                ...input,
+                img: await getImage(`${input.title}`)
+            })
+            dispatch(AddSong(input))
+        }
+    
     return (
         <div className="form-container">
-            <form onSubmit={async (e) => {
-                e.preventDefault()
-                setInput({
-                    ...input,
-                    img: await image
-                })
-                dispatch(AddSong(input))
-            }}>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title: </label>
                 <input id="title" name="title" type="text" onChange={handleInput} />
                 <label htmlFor="artiest" >Artiest: </label>
@@ -42,7 +41,7 @@ function Form() {
                     <option value="star 4">star 4</option>
                     <option value="star 5">star 5</option>
                 </select>
-                <button>Songs</button>
+                <button type="submit" >Songs</button>
             </form>
         </div>
     )

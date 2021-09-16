@@ -1,14 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 function SongOverView() {
     const Songs = useSelector(state => state.AddSong)
     const array = Songs.map(song => {
-
         return (
-            <div className="song-container" key={song.id}>
+            <div className="song-container" key={uuidv4()}>
                 <h3>
                     Title: {song.title}
                 </h3>
