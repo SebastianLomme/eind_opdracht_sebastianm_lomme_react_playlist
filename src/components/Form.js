@@ -7,7 +7,7 @@ import getImage from "./fetch";
 function Form() {
     const dispatch = useDispatch()
     const [input, setInput] = useState({})
-    const handleInput = (e) => {
+    const handleInput = async (e) => {
         const { name, value } = e.target
         setInput({
             ...input,
@@ -16,14 +16,9 @@ function Form() {
         )
     }
     const handleSubmit = async (e) => {
-            e.preventDefault()
-            setInput({
-                ...input,
-                img: await getImage(`${input.title}`)
-            })
-            dispatch(AddSong(input))
-        }
-    
+        e.preventDefault()
+        dispatch(AddSong({ ...input, img: await getImage(`${input.title}`) }))
+    }
     return (
         <div className="form-container">
             <form onSubmit={handleSubmit}>
