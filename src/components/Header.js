@@ -7,10 +7,9 @@ function Header() {
     const log = useSelector(state => state.LogToConsole)
     const dispatch = useDispatch()
     return (
-        <div>
-            <h1 onClick={() => dispatch(logName(...array))}>Hello {log.Name}</h1>
-            <p>Age: {log.age}</p>
-        </div>
+        <header>
+            <h1 onClick={() => dispatch(logName(...array))}>Favoriete afspeeltijst {log.Name}</h1>
+        </header>
     )
 }
 

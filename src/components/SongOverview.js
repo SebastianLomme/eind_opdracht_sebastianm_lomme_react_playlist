@@ -1,21 +1,33 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { AddSong } from "../actions/index";
+import { useSelector } from "react-redux";
+
 
 
 function SongOverView() {
     const Songs = useSelector(state => state.AddSong)
-    const dispatch = useDispatch()
-    const array = Songs.map(song =>
-        <li>
-            Title: {song.title}
-            Artiest: {song.artiest}
-            Genre: {song.genre}
-            Ratting: {}
-        </li>)
+    const array = Songs.map(song => {
+
+        return (
+            <div className="song-container" key={song.id}>
+                <h3>
+                    Title: {song.title}
+                </h3>
+                <h4>
+                    Artiest: {song.artiest}
+                </h4>
+                <p>
+                    Genre: {song.genre}
+                </p>
+                <p>
+                    Ratting: {song.ratting}
+                </p>
+                <img className="cover-image" src={song.img} alt={song.title} />
+        </div >
+        )
+
+    })
     return (
         <div>
-            <button onClick={() => dispatch(AddSong())}>Songs</button>
             {array}
         </div>
     )
