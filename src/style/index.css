@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+header {
+  background: #4A4E3E;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #FFE8D6;
+}
+
+.form-container {
+  background: #CB997E;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+}
+
+.form-container > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.form-container label,
+.form-container button {
+  margin-top: 10px;
+}
+
+.form-container button {
+  border: none;
+  border-radius: 5px;
+  background: #6B705C;
+  color: #FFF5ED;
+  padding: .5em;
+}
+
+.song-container {
+  border: black solid;
+  max-width: 300px;
+  text-align: center;
+}
+
+.song-container h3 {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.song-container h4 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cover-image {
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=index.css.map */
