@@ -1,11 +1,20 @@
+import data from "../components/playListData"
 
-const AddSong = (state = [], action) => {
+console.log(data)
+
+const initialState = {
+    isLoading: true,
+    songs: data
+}
+
+const AddSong = (state = initialState, action) => {
     switch (action.type) {
         case "ADDSONG":
-            const array =
-                [...state, action.payload]
-            console.log("array",array)
-            return array;
+            return {
+                ...state,
+                isLoading: false,
+                songs: [...state.songs ,action.payload]
+            };
         default:
             return state;
     }

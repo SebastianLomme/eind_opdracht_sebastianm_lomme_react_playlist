@@ -53,10 +53,25 @@ header {
 
 }
 
+.songs-overview {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: space-around;
+}
+
 .song-container {
   border: black solid;
-  max-width: 300px;
+  width: 300px;
   text-align: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 5px $base-color-900; 
+  box-shadow: 5px 5px 15px 5px $base-color-900;
+
+
 
   h3 {
     margin: 0;
@@ -75,4 +90,5 @@ img {
 .cover-image {
   width: 100px;
   height: 100px;
+  object-fit: cover;
 }

@@ -4,29 +4,29 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 function SongOverView() {
-    const Songs = useSelector(state => state.AddSong)
+    const Songs = useSelector(state => state.Add.songs)
+    console.log("Songs: ",Songs)
     const array = Songs.map(song => {
         return (
             <div className="song-container" key={uuidv4()}>
-                <h3>
+                {song.title ? <h3>
                     Title: {song.title}
-                </h3>
-                <h4>
+                </h3> : null}
+                {song.artiest ? <h4>
                     Artiest: {song.artiest}
-                </h4>
-                <p>
+                </h4> : null}
+                {song.genre ? <p>
                     Genre: {song.genre}
-                </p>
-                <p>
-                    Ratting: {song.ratting}
-                </p>
+                </p> : null}
+                {song.rating ? <p>
+                    Rating: {song.rating}
+                </p> : null}
                 <img className="cover-image" src={song.img} alt={song.title} />
-        </div >
+            </div >
         )
-
     })
     return (
-        <div>
+        <div className="songs-overview">
             {array}
         </div>
     )
