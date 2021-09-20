@@ -1,14 +1,14 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { logName } from "../actions/index";
-const array = ["Sebastian", 31]
+import { useSelector } from "react-redux";
+import  SortFunction  from "./SortFunction";
 
 function Header() {
-    const log = useSelector(state => state.LogToConsole)
-    const dispatch = useDispatch()
+    const Loading = useSelector(state => state.Songs.isLoading)
     return (
         <header>
-            <h1 onClick={() => dispatch(logName(...array))}>Favoriete afspeeltijst {log.Name}</h1>
+            <h1>Favoriete afspeeltijst</h1>
+            {Loading ? <p>Loading....</p> : null}
+            <SortFunction />
         </header>
     )
 }
