@@ -1,7 +1,6 @@
 import React from "react";
 
 function FormInput(props) {
-    console.log(props)
     const {handleSubmit, handleInput, input} = props
     return (
         <form onSubmit={handleSubmit}>

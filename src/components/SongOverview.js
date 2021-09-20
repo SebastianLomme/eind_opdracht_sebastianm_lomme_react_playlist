@@ -1,12 +1,27 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
 
 
 function SongOverView() {
     const Songs = useSelector(state => state.Songs.songs)
-    console.log("Songs: ",Songs)
-    const array = Songs.map(song => {
+    const sortBy = useSelector(state => state.Songs.sortBy)
+    const dispatch = useDispatch()
+
+    const sorted = () => {
+        if (sortBy === "a-z" || sortBy === "z-a") {
+            return Songs.sort((a, b) => {
+                const isReversed = (sortBy === "a-z") ? 1 : -1;
+                return isReversed * a.title.localeCompare(b.title)
+            })
+        } else if (sortBy === "1-5" || sortBy === "5-1") {
+            return Songs.sort((a, b) => {
+                const isReversed = (sortBy === "1-5") ? 1 : -1;
+                return isReversed * a.rating.localeCompare(b.rating)
+            })
+        }
+    }
+    const sortArray = sorted()
+    const array = sortArray.map(song => {
         return (
             <div className="song-container" key={uuidv4()}>
                 {song.title ? <h3>
@@ -30,7 +45,6 @@ function SongOverView() {
             {array}
         </div>
     )
-}
+    }
 
 export default SongOverView
-

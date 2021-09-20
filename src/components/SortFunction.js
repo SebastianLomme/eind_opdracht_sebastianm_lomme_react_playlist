@@ -1,17 +1,17 @@
 import React from "react";
-import { SortSong } from "../actions";
-import { useDispatch, useSelector } from "react-redux";
-
+import { SortSong, SortGenre } from "../actions";
+import { useDispatch } from "react-redux";
 
 const SortFunction = () => {
-    const Songs = useSelector(state => state.Songs.songs)
-    const state = useSelector(state => state)
-    console.log(state)
     const dispatch = useDispatch()
-    console.log(Songs)
     return (
-        <button onClick={() => dispatch(SortSong(Songs))}>Sort</button>
+        <div>
+            <button onClick={() => dispatch(SortSong("a-z"))}>Sort a-z </button>
+            <button onClick={() => dispatch(SortSong("z-a"))}>Sort z-a </button>
+            <button onClick={() => dispatch(SortSong("1-5"))}>Sort 1-5 </button>
+            <button onClick={() => dispatch(SortSong("5-1"))}>Sort 5-1 </button>
+            </div>
     )
 }
 
-export default SortFunction
+export default SortFunction;

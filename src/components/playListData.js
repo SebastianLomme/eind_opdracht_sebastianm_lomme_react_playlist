@@ -4,7 +4,7 @@ const data = [
         title: "Duurt te Lang",
         artiest: "Davina Michelle",
         genre: "Pop",
-        rating: "5",
+        rating: "1",
         img: "https://img.discogs.com/UKaHfCK3oRiRYHn379Mhxx5M8-E=/600x748/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-6746294-1588440957-7331.jpeg.jpg",
     },
     {
@@ -20,7 +20,7 @@ const data = [
         title: "Blijven Slapen",
         artiest: "Snelle, & Maan",
         genre: "Pop",
-        rating: "5",
+        rating: "3",
         img: "https://img.discogs.com/LAr9iybKw27fhLa7Nh4cZfHJiXo=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-17811259-1615577547-4662.png.jpg",
     },
     {
@@ -44,7 +44,7 @@ const data = [
         title: "Hoe Het Danst",
         artiest: "Marco Borsato",
         genre: "Pop",
-        rating: "5",
+        rating: "4",
         img: "https://img.discogs.com/o7zHM3ibZ3Q4u2uBdLAjQZ3im2o=/265x397/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-287375-1114458089.jpg.jpg",
 
     },
