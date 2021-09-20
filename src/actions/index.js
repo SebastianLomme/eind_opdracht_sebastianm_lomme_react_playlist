@@ -11,3 +11,18 @@ export const SortSong = (sortBy) => {
         payload: sortBy,
     }
 }
+
+export const DeleteId = (id) => {
+    return {
+        type: "DELETE_ID",
+        payload: id,
+    }
+}
+
+export const SortGenre = (genre) => {
+    console.log(genre)
+    return {
+        type: "SORT_GENRE",
+        payload: genre,
+    }
+}

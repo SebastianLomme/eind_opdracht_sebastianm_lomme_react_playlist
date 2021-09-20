@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
+import {DeleteId} from "../actions/"
 
 
 function SongOverView() {
@@ -37,6 +38,7 @@ function SongOverView() {
                     Rating: {song.rating}
                 </p> : null}
                 <img className="cover-image" src={song.img} alt={song.title} />
+                <button onClick={(e) => dispatch(DeleteId(e.target.id))} id={song.id} >Delete</button>
             </div >
         )
     })

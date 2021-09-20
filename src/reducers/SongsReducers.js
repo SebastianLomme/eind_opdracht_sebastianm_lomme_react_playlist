@@ -19,6 +19,19 @@ const Songs = (state = initialState, action) => {
                 ...state,
                 sortBy: action.payload,
             }
+        case "DELETE_ID":
+            const newArray = state.songs.filter(item => item.id !== Number(action.payload))
+            return {
+                ...state,
+                songs: newArray
+            }
+        case "SORT_GENRE":
+            const genreArray = state.songs.filter(item => item.genre === action.payload)
+            console.log(genreArray)
+            return {
+                ...state,
+                songs: genreArray
+            }
         default:
             return state;
     }
