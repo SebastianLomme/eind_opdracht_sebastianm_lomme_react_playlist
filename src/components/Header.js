@@ -2,7 +2,7 @@ import React from "react";
 import {useSelector} from "react-redux"
 
 function Header() {
-    const Loading = useSelector(state => state.Add.isLoading)
+    const Loading = useSelector(state => state.Songs.isLoading)
     return (
         <header>
             <h1>Favoriete afspeeltijst</h1>

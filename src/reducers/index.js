@@ -1,9 +1,9 @@
-import AddSong from "./AddSong"
+import Songs from "./AddSong"
 import { combineReducers } from "redux"
 
+
 const allReducers = combineReducers({
-    Add: AddSong
-    
+    Songs,
 })
 
 export default allReducers

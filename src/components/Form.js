@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AddSong } from "../actions";
 import getImage from "./fetch";
-import FormInput from "./FormInput"
+import FormInput from "./FormInput";
+import { useSelector } from "react-redux";
 
 
 function Form() {
+    const Songs = useSelector(state => state.Songs.songs)
     const dispatch = useDispatch()
     const [input, setInput] =
         useState({
@@ -26,8 +28,12 @@ function Form() {
         e.preventDefault()
         if (input.title !== "") {
             const img = await getImage(input.title, input.artiest)
-            console.log("img: ", img)
-            dispatch(AddSong({ ...input, img: img }))
+            const newSong = {
+                id: Songs.length +1,
+                ...input,
+                img: img,
+            }
+            dispatch(AddSong(newSong))
             setInput({
                 title: "",
                 artiest: "",
@@ -35,7 +41,6 @@ function Form() {
                 rating: "5",
             })
         }
-
     }
     return (
         <div className="form-container">

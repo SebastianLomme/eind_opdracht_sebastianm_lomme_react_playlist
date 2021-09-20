@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 function SongOverView() {
-    const Songs = useSelector(state => state.Add.songs)
+    const Songs = useSelector(state => state.Songs.songs)
     console.log("Songs: ",Songs)
     const array = Songs.map(song => {
         return (
