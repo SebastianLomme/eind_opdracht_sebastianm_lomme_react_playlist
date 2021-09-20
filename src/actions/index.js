@@ -20,9 +20,15 @@ export const DeleteId = (id) => {
 }
 
 export const SortGenre = (genre) => {
-    console.log(genre)
     return {
         type: "SORT_GENRE",
         payload: genre,
+    }
+}
+
+export const IsLoading = (loading) => {
+    return {
+        type: "IS_LOADING",
+        payload: loading,
     }
 }

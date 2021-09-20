@@ -11,10 +11,12 @@ const SortFunction = () => {
             <button onClick={() => dispatch(SortSong("1-5"))}>Sort 1-5 </button>
             <button onClick={() => dispatch(SortSong("5-1"))}>Sort 5-1 </button>
             <select onChange={(e) => dispatch(SortGenre(e.target.value))}>
+                <option value="">All</option>
                 <option value="Pop">Pop</option>
                 <option value="Latino">Latino</option>
+
             </select>
-            </div>
+        </div>
     )
 }
 

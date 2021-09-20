@@ -1,21 +1,24 @@
 import { useSelector, useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
-import {DeleteId} from "../actions/"
+import { DeleteId } from "../actions/"
+
 
 
 function SongOverView() {
     const Songs = useSelector(state => state.Songs.songs)
+    const Filter = useSelector(state => state.Songs.filter)
     const sortBy = useSelector(state => state.Songs.sortBy)
     const dispatch = useDispatch()
 
+    const FilterArray = Filter ? Filter : Songs
     const sorted = () => {
         if (sortBy === "a-z" || sortBy === "z-a") {
-            return Songs.sort((a, b) => {
+            return FilterArray.sort((a, b) => {
                 const isReversed = (sortBy === "a-z") ? 1 : -1;
                 return isReversed * a.title.localeCompare(b.title)
             })
         } else if (sortBy === "1-5" || sortBy === "5-1") {
-            return Songs.sort((a, b) => {
+            return FilterArray.sort((a, b) => {
                 const isReversed = (sortBy === "1-5") ? 1 : -1;
                 return isReversed * a.rating.localeCompare(b.rating)
             })

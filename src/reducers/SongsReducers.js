@@ -3,7 +3,8 @@ import data from "../components/playListData"
 const initialState = {
     isLoading: true,
     songs: data,
-    sortBy: "a-z" 
+    sortBy: "a-z",
+    filter: ""
 }
 
 const Songs = (state = initialState, action) => {
@@ -21,17 +22,32 @@ const Songs = (state = initialState, action) => {
             }
         case "DELETE_ID":
             const newArray = state.songs.filter(item => item.id !== Number(action.payload))
+            const newFilterArray = state.filter ? state.filter.filter(item => item.id !== Number(action.payload)) : ""
             return {
                 ...state,
-                songs: newArray
+                songs: newArray,
+                filter: newFilterArray,
             }
         case "SORT_GENRE":
             const genreArray = state.songs.filter(item => item.genre === action.payload)
-            console.log(genreArray)
+
+            if (genreArray.length === 0) {
+                return {
+                    ...state,
+                    filter: "",
+                }
+            } else {
+                return {
+                    ...state,
+                    filter: genreArray
+                }
+            }
+        case "IS_LOADING":
             return {
                 ...state,
-                songs: genreArray
+                isLoading: action.payload,
             }
+
         default:
             return state;
     }
