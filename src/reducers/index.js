@@ -1,10 +1,8 @@
-import LogToConsole from "./LogToConsole"
-import AddSong from "./AddSong"
+import SongsReducers from "./SongsReducers"
 import { combineReducers } from "redux"
 
 const allReducers = combineReducers({
-    LogToConsole,
-    AddSong
+    Songs : SongsReducers,
 })
 
 export default allReducers

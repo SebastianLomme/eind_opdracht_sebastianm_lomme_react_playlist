@@ -55,10 +55,21 @@ header h1 {
   padding: .5em;
 }
 
+.songs-overview {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+}
+
 .song-container {
   border: black solid;
-  max-width: 300px;
+  width: 300px;
   text-align: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 5px #6B705C;
+  box-shadow: 5px 5px 15px 5px #6B705C;
 }
 
 .song-container h3 {
@@ -77,5 +88,7 @@ img {
 .cover-image {
   width: 100px;
   height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=index.css.map */
