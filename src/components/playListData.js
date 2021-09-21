@@ -52,7 +52,7 @@ const data = [
         id: 7,
         title: "Ze Huilt Maar Ze Lacht",
         artiest: "Maan",
-        genre: "Nedelands talig",
+        genre: "Nederlands talig",
         rating: "5",
         img: "https://img.discogs.com/OoORS5ntZJzzx1N9LZ6inJH1KYQ=/600x337/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-5010662-1571434517-1590.jpeg.jpg",
     },

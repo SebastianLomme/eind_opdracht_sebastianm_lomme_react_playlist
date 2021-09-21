@@ -9,7 +9,7 @@ function FormInput(props) {
         <label htmlFor="artiest" >Artiest: </label>
         <input id="artiest" name="artiest" type="text" onChange={handleInput} value={input.artiest} />
         <label htmlFor="genre" >Genre: </label>
-        <input id="genre" type="text" name="genre" onChange={handleInput} />
+        <input id="genre" type="text" name="genre" onChange={handleInput} value={input.genre} />
         <label htmlFor="rating" >Rating:</label>
         <select id="rating" name="rating" onChange={handleInput} value={input.rating}>
             <option value="5">star 5</option>

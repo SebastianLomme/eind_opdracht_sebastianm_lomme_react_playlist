@@ -26,9 +26,9 @@ export const SortGenre = (genre) => {
     }
 }
 
-export const IsLoading = (loading) => {
+export const SortRating = (rating) => {
     return {
-        type: "IS_LOADING",
-        payload: loading,
+        type: "SORT_RATING",
+        payload: rating,
     }
 }
