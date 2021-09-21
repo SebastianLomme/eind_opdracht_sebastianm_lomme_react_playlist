@@ -16,11 +16,11 @@ const SortFunction = () => {
             key={uuidv4()}
         />)
     return (
-        <div>
-            <button onClick={() => dispatch(SortSong("a-z"))}>Sort a-z </button>
-            <button onClick={() => dispatch(SortSong("z-a"))}>Sort z-a </button>
-            <button onClick={() => dispatch(SortSong("1-5"))}>Sort 1-5 </button>
-            <button onClick={() => dispatch(SortSong("5-1"))}>Sort 5-1 </button>
+        <div className="sort-form">
+            <button onClick={() => dispatch(SortSong("a-z"))}>Sorteer op a-z </button>
+            <button onClick={() => dispatch(SortSong("z-a"))}>Sorteer op z-a </button>
+            <button onClick={() => dispatch(SortSong("1-5"))}>Sorteer op 1-5 </button>
+            <button onClick={() => dispatch(SortSong("5-1"))}>Sorteer op 5-1 </button>
             <select onChange={(e) => dispatch(SortGenre(e.target.value))}>
             <option value="">All Genre</option>
             {listInputGenre}
