@@ -1,9 +1,9 @@
 import data from "../components/playListData"
 
 const initialState = {
-    isLoading: true,
     songs: data,
     sortBy: "a-z",
+    filterBy: [],
     filter: ""
 }
 
@@ -12,7 +12,6 @@ const Songs = (state = initialState, action) => {
         case "ADDSONG":
             return {
                 ...state,
-                isLoading: false,
                 songs: [...state.songs, action.payload]
             };
         case "SORT_SONGS":
@@ -30,7 +29,6 @@ const Songs = (state = initialState, action) => {
             }
         case "SORT_GENRE":
             const genreArray = state.songs.filter(item => item.genre === action.payload)
-
             if (genreArray.length === 0) {
                 return {
                     ...state,
@@ -42,12 +40,6 @@ const Songs = (state = initialState, action) => {
                     filter: genreArray
                 }
             }
-        case "IS_LOADING":
-            return {
-                ...state,
-                isLoading: action.payload,
-            }
-
         default:
             return state;
     }

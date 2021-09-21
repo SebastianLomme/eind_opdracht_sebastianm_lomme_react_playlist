@@ -1,4 +1,5 @@
 @import 'variable';
+@import "mixin";
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,6 +8,8 @@
 body {
   margin: 0;
   font-family: $font-base;
+  color: $base-color-300;
+  background: $base-color-300;
 }
 
 h1, h2, h3 {
@@ -24,7 +27,65 @@ header {
   }
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: $base-color-700;
+  
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
 
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: $base-color-1100;
+
+    &:hover {
+      color: $base-color-300;
+    }
+  }
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: $base-color-700;
+}
+
+.form-section {
+  background: $base-color-500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include for-tablet {
+    flex-direction: row;
+  }
+
+& > div{
+  align-self: center;
+}
+}
+
+.sort-form {
+  display: flex;
+
+  & select{
+    height: fit-content;
+    padding: 5px;
+    margin: auto;
+  }
+
+  @include for-tablet {
+    flex-direction: column;
+    order: 1;
+  }
+}
 
 .form-container {
   background: $base-color-500;
@@ -35,7 +96,7 @@ header {
 .form-container > * {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  width: 300px;
   margin: 20px auto;
 }
 
@@ -44,32 +105,48 @@ header {
   margin-top:  10px;
 }
 
-.form-container button {
+button {
   border: none;
   border-radius: 5px;
   background: $base-color-900;
   color: $base-color-100;
   padding: .5em;
-
+  margin: 10px;
 }
+
+button:hover,
+button:active {
+ background: $base-color-100;
+ color: $base-color-900;
+}
+
+
 
 .songs-overview {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // justify-content: space-around;
+  grid-template-columns: repeat(1, auto);
+
+  @include for-tablet {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @include for-small-desktop {
+    grid-template-columns: repeat(3, auto);
+  }
+
 }
 
 .song-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: black solid;
   width: 300px;
-  text-align: center;
   margin: 10px auto;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 15px 5px $base-color-900; 
   box-shadow: 5px 5px 15px 5px $base-color-900;
+  background: $base-color-500 ;
 
 
 
@@ -91,4 +168,14 @@ img {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+
+.about-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+  text-align: center;
+  }
 }
