@@ -72,6 +72,6 @@ const data = [
         rating: "5",
         img: "https://img.discogs.com/7rimA2rA1fTS2Lj12rTDdOolYiM=/600x600/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-5322358-1601367037-8827.jpeg.jpg",
     },
-]
+];
 
-export default data
+export default data;

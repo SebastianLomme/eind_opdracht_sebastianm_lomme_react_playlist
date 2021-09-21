@@ -1,6 +1,6 @@
-import React from "react"
-import Header from "./components/Header"
-import PlayList from "./components/PlayList"
+import React from "react";
+import Header from "./components/Header";
+import PlayList from "./components/PlayList";
 import Nav from "./components/Nav";
 import About from "./components/About";
 import {
@@ -27,7 +27,7 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
 

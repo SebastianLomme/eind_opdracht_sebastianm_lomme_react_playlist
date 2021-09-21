@@ -74,6 +74,8 @@ nav {
 
 .sort-form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   & select{
     height: fit-content;
@@ -116,8 +118,8 @@ button {
 
 button:hover,
 button:active {
- background: $base-color-100;
- color: $base-color-900;
+  background: $base-color-100;
+  color: $base-color-900;
 }
 
 
