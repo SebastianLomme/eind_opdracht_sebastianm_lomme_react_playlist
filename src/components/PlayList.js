@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import SortFunction from "./SortFunction";
-import Form from "./Form"
-import SongOverView from "./SongOverview"
+import Form from "./Form";
+import SongOverView from "./SongOverview";
 
 function PlayList() {
     return (
@@ -12,7 +12,7 @@ function PlayList() {
             </div>
             <SongOverView />
         </div>
-    )
-}
+    );
+};
 
-export default PlayList
+export default PlayList;

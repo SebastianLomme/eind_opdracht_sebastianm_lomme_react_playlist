@@ -1,10 +1,10 @@
-import React from "react"
+import React from "react";
 
 function OptionInput(props) {
     return (
-    <option value={props.value}>{props.value}</option>
-    )
-}
+        <option value={props.value}>{props.value}</option>
+    );
+};
 
 
-export default OptionInput
+export default OptionInput;
