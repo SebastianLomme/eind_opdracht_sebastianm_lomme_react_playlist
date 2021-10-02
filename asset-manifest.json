@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/eind_opdracht_sebastianm_lomme_react_playlist/static/css/main.70bf51e2.chunk.css",
+    "main.js": "/eind_opdracht_sebastianm_lomme_react_playlist/static/js/main.b77d0f61.chunk.js",
+    "main.js.map": "/eind_opdracht_sebastianm_lomme_react_playlist/static/js/main.b77d0f61.chunk.js.map",
+    "runtime-main.js": "/eind_opdracht_sebastianm_lomme_react_playlist/static/js/runtime-main.07f3ebfa.js",
+    "runtime-main.js.map": "/eind_opdracht_sebastianm_lomme_react_playlist/static/js/runtime-main.07f3ebfa.js.map",
+    "static/js/2.36f97b47.chunk.js": "/eind_opdracht_sebastianm_lomme_react_playlist/static/js/2.36f97b47.chunk.js",
+    "static/js/2.36f97b47.chunk.js.map": "/eind_opdracht_sebastianm_lomme_react_playlist/static/js/2.36f97b47.chunk.js.map",
+    "index.html": "/eind_opdracht_sebastianm_lomme_react_playlist/index.html",
+    "static/css/main.70bf51e2.chunk.css.map": "/eind_opdracht_sebastianm_lomme_react_playlist/static/css/main.70bf51e2.chunk.css.map",
+    "static/js/2.36f97b47.chunk.js.LICENSE.txt": "/eind_opdracht_sebastianm_lomme_react_playlist/static/js/2.36f97b47.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.07f3ebfa.js",
+    "static/js/2.36f97b47.chunk.js",
+    "static/css/main.70bf51e2.chunk.css",
+    "static/js/main.b77d0f61.chunk.js"
+  ]
+}
