@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const data = [
     {
-        id: 1,
+        id: uuidv4(),
         title: "Duurt te Lang",
         artiest: "Davina Michelle",
         genre: "Pop",
@@ -8,7 +10,7 @@ const data = [
         img: "https://img.discogs.com/UKaHfCK3oRiRYHn379Mhxx5M8-E=/600x748/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-6746294-1588440957-7331.jpeg.jpg",
     },
     {
-        id: 2,
+        id: uuidv4(),
         title: "Zij Weet Het",
         artiest: "Tino Martin",
         genre: "Nederlands talig",
@@ -16,7 +18,7 @@ const data = [
         img: "https://img.discogs.com/R6qgH2Dn0IyXiXH1Zux9xE5x-_A=/600x900/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-6443210-1599956962-5976.jpeg.jpg",
     },
     {
-        id: 3,
+        id: uuidv4(),
         title: "Blijven Slapen",
         artiest: "Snelle, & Maan",
         genre: "Pop",
@@ -24,7 +26,7 @@ const data = [
         img: "https://img.discogs.com/LAr9iybKw27fhLa7Nh4cZfHJiXo=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-17811259-1615577547-4662.png.jpg",
     },
     {
-        id: 4,
+        id: uuidv4(),
         title: "De Overkant",
         artiest: "Suzan & Freek",
         genre: "Neder Pop",
@@ -32,7 +34,7 @@ const data = [
         img: "https://img.discogs.com/yvgHznWPlgzhs5eL6XgdUy135dE=/600x600/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-5754133-1500292487-5371.jpeg.jpg",
     },
     {
-        id: 5,
+        id: uuidv4(),
         title: "Weg Van Jou",
         artiest: "Suzan & Freek",
         genre: "Nederlands talig",
@@ -40,7 +42,7 @@ const data = [
         img: "https://img.discogs.com/yvgHznWPlgzhs5eL6XgdUy135dE=/600x600/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-5754133-1500292487-5371.jpeg.jpg",
     },
     {
-        id: 6,
+        id: uuidv4(),
         title: "Hoe Het Danst",
         artiest: "Marco Borsato",
         genre: "Pop",
@@ -49,7 +51,7 @@ const data = [
 
     },
     {
-        id: 7,
+        id: uuidv4(),
         title: "Ze Huilt Maar Ze Lacht",
         artiest: "Maan",
         genre: "Nederlands talig",
@@ -57,7 +59,7 @@ const data = [
         img: "https://img.discogs.com/OoORS5ntZJzzx1N9LZ6inJH1KYQ=/600x337/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-5010662-1571434517-1590.jpeg.jpg",
     },
     {
-        id: 8,
+        id: uuidv4(),
         title: "Mas Mas Mas",
         artiest: "Rolf Sanchez",
         genre: "Latino",
@@ -65,7 +67,7 @@ const data = [
         img: "https://img.discogs.com/7rimA2rA1fTS2Lj12rTDdOolYiM=/600x600/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-5322358-1601367037-8827.jpeg.jpg",
     },
     {
-        id: 9,
+        id: uuidv4(),
         title: "Ven Ven",
         artiest: "Rolf Sanches",
         genre: "Latino",

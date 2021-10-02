@@ -3,10 +3,10 @@ import { useDispatch } from "react-redux";
 import { AddSong } from "../actions";
 import getImage from "./fetch";
 import FormInput from "./FormInput";
-import { useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
+
 
 function Form() {
-    const Songs = useSelector(state => state.Songs.songs);
     const dispatch = useDispatch();
     const [input, setInput] =
         useState({
@@ -28,7 +28,7 @@ function Form() {
         if (input.title !== "") {
             const img = await getImage(input.title, input.artiest);
             const newSong = {
-                id: Songs.length + 1,
+                id: uuidv4(),
                 ...input,
                 img: img,
             };

@@ -20,8 +20,8 @@ const Songs = (state = initialState, action) => {
                 sortBy: action.payload,
             };
         case "DELETE_ID":
-            const newArray = state.songs.filter(item => item.id !== Number(action.payload));
-            const newFilterArray = state.filter ? state.filter.filter(item => item.id !== Number(action.payload)) : "";
+            const newArray = state.songs.filter(item => item.id !== action.payload);
+            const newFilterArray = state.filter ? state.filter.filter(item => item.id !== action.payload) : "";
             return {
                 ...state,
                 songs: newArray,
